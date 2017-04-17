@@ -1,0 +1,27 @@
+#tushu  ol hr{
+    
+    left: px;
+	height:1px;
+	border:none;
+	border-top:1px 
+	dashed 	#C0C0C0;
+}
+
+#tushu a{
+
+text-decoration: none;
+font-size: 20px;
+color: black;
+
+}
+
+#tushu a:hover{
+	color: red;
+
+}
+
+#tushu li{
+
+    line-height: 30px;
+	text-align:left;
+}
