@@ -1,0 +1,44 @@
+p{
+	color:blue;
+}
+
+.spa{
+	color: red;
+}
+
+.stron{
+	font-weight: bold;
+}
+
+div{
+	color: gray;
+}
+
+#yiku {
+	color: green;
+}
+
+[disabled]{
+	background-color: red;
+}
+
+[type=button]{
+	color: blue;
+}
+
+[class~=sports]{
+	color: #ff22ff;
+}
+
+[lang|=en]{
+	color: #ffdcca;
+}
+
+[href^="#"]{
+	color: red;
+}
+
+[href$=pdf]{
+	color: #faccdc;
+}
+

@@ -1,0 +1,25 @@
+a:link{color: red;}
+a:visited{color: green;}
+/*可以用到别的元素上面*/
+a:hover{color: blue;}
+a:active{color: orange;}
+
+.main h2{color: red;}
+.main>h2{color:green;}
+
+.d2 h2~ p{color: red;}
+body{font-family: "Georgia";}
+
+.d3{color: blue;
+border: 1px solid #ccc;}
+
+.d3 p{color: blue;
+text-align: left;
+font-weight: bold;}
+
+.d3 p.special{
+	color: red;
+	text-align: right;
+}
+
+.d3 p:first-child{color:green;}
