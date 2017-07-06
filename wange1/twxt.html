@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <div id="b-nr-page">
+        <li id="page-last"></li>
+        <li id="page-next"></li>
+    </div>
+    <script>
+    var Page_num = 5;
+    for (var i = 0; i < Page_num; i++) {
+        var page = document.createElement('li');
+        page.innerHTML = i + 1;
+        if (i == 0) {
+            page.className = 'page-active'
+        }
+        var par = document.getElementById('b-nr-page')
+        par.insertBefore(page, document.getElementById('page-next'))
+ 
+    }
+ 
+    var page_btn = document.getElementById('b-nr-page').getElementsByTagName('li');
+    console.log(page_btn)
+    console.log(page_btn.length)
+    </script>
+</body>
+ 
+</html>

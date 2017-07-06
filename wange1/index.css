@@ -1,0 +1,431 @@
+  /*导航css*/
+    .gg .g-body .b-daohang{
+    	margin: 0 auto;
+    	height: 297px;
+    	width: 1616px;
+    	background-color: #fff;
+    	text-align: center;
+    }
+
+    .gg .g-body .b-daohang .b-dh-more{
+    	position: relative;
+    	display: inline-block;
+    	margin-top: 60px;
+    	margin-right: 39px;
+    	margin-left: 39px;
+    	padding: 1px;
+    	height: 180px;
+    	width: 348px;
+    	text-align: left;
+    }
+    
+    .gg .g-body .b-daohang .b-dh-logo{
+    	position: absolute;
+    	display: inline-block;
+    	margin:5px;
+    	width: 80px;
+    	height: 80px;
+    	background-image: url(image/导航-Logo.png);
+    	background-repeat: no-repeat;
+    	
+    }
+
+	.gg .g-body .b-daohang .gkk{
+		background-position: 0 0;
+	}
+	
+	.gg .g-body .b-daohang .ykt{
+		background-position: -81px 0;
+	}
+
+	.gg .g-body .b-daohang .zgdx{
+		background-position: -162px 0;
+	}
+
+     .gg .g-body .b-daohang .b-dh-more .b-dh-title{
+     	position: absolute;
+     	left: 100px;
+     	top:2px;
+     	width: 250px;
+     	height: 170px;
+     }
+	
+	 .gg .g-body .b-daohang .b-dh-more .b-dh-title .b-tt-content{
+	 	display: block;
+	 	margin-bottom: 32px;
+	 	width: 242px;
+	 	height: 89px;
+	 	margin: 1px;
+	 	font-size: 14px;
+	 	color: #666666
+	 }
+	
+	 .gg .g-body .b-daohang .b-dh-more .b-dh-title .b-tt-a{
+	 	display: block;
+	 	margin: 0;
+	 	color:#39a030;
+	 }
+
+		
+	 .gg .g-body .b-daohang .b-dh-more .b-dh-title span{
+	 	display: block;
+	 	width: 242px;
+	 	height: 25px;
+	 	margin-bottom: 16px;
+	 	font-size: 21px;
+	 	font-weight: bold;
+	 	font-family: 微软雅黑;
+	 	color: #333333;
+	 }
+	
+	.gg .g-body .b-daohang .b-dh-more .b-dh-title a{
+		text-decoration: none;
+		
+	}
+	
+	.gg .g-body .b-daohang .b-dh-more .b-dh-title a:hover .b-tt-a {
+		text-decoration: underline;
+		
+	}
+  /*导航css结束*/
+
+
+
+  /*展示图片css*/
+    .gg .g-body .b-zhangshi{
+    	height: 221px;
+    	width: 1620px;
+    	margin: 0 auto;
+    	
+    }
+    .gg .g-body .b-zhangshi .b-zs-img{
+    	display: block;
+    	float: left;
+    	height: 220px;
+    	width: 320px;
+    	margin:1px 2px 0px 2px; 
+    	background-color: #222;
+    }
+ /*展示图片结束*/
+
+
+
+ /*轮播css*/
+    .gg .g-body .b-banner{
+        position: relative;
+        height: 460px;
+        width: 1610px;
+        margin: 0 auto;
+        overflow: hidden;
+   
+    }
+
+    .gg .g-body .b-banner .b-banner-list{
+        position: absolute;
+    
+        width: 4830px;
+        height: 460px;
+        z-index: 1;
+
+    }
+
+    .gg .g-body .b-banner .b-banner-list a{
+        display: block;
+        float: left;
+        width: 1610px;
+        height: 460px;
+    }
+    
+    .gg .g-body .b-banner .b-banner-list .b-bn-banner1{
+        background: url("image/banner01.jpg"); no-repeat;
+    }
+    
+    .gg .g-body .b-banner .b-banner-list .b-bn-banner2{
+        background: url("image/banner02.jpg"); no-repeat;
+    }
+
+    .gg .g-body .b-banner .b-banner-list .b-bn-banner3{
+        background: url("image/banner03.jpg"); no-repeat;
+    }
+    
+    .gg .g-body .b-banner .b-slide{
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        margin-left: -5px;
+        bottom: 20px;
+    }
+
+    .gg .g-body .b-banner .b-slide i{
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .gg .g-body .b-banner .b-slide .active{
+        background-color: #333333;
+    }   
+  /*轮播结束*/
+
+
+
+
+     /*内容主要内容的css*/
+    .gg .g-body .b-nr-main{
+        position: absolute;
+        top: 57px;
+        height: 1220px;
+        width: 988px;
+        
+    }
+    
+    .gg .g-body .b-nr-main .nr-main-mode{
+        float: left;
+        width: 225px;
+        height: 230px;
+        background-color: #ffffff;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        position: relative;
+        border: 1px solid #e6e6e6;
+    }
+
+    /*隐藏浮动内容框的css*/
+    .gg .g-body .b-nr-main .nr-main-mode:hover .nr-main-mode-active{
+        display: block;
+        width: 480px;
+        height: 230px;
+        background-color: #fff;
+        position: absolute;
+        padding: 10px 0px 0px 0px;
+        z-index: 2;
+        box-shadow: 0 0 1px #000;
+        left: -10px;
+        top: -10px;
+    }
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active{
+    
+        display: none;
+
+    }
+    
+
+     .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-img-active{
+        width: 223px;
+        height: 124px;
+        margin: 0px 10px 20px 10px;
+        background-color: #344;
+     }
+
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-name-active{
+        width: 215px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333333;
+        
+        position: absolute;
+        top: 14px;
+        left: 257px;
+        
+    }
+    
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-pepo-active{
+        margin-top: 8px;
+        margin-left: 4px;
+        position: absolute;
+        top: 40px;
+        left: 253px;
+        font-size: 12px;
+        color: #999999;
+        height: 16px;
+    
+        
+        
+    
+    }
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-pepo-active div{
+        display: inline-block;
+        width: 11px;
+        height: 13px;
+        margin:2px;
+        background-image: url(image/小Logo.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-pepo-active p{
+    
+        position: relative;
+        left: 4px;
+        top: -4px;
+        margin:0;
+        
+        height: 15px;
+        display: inline-block;
+    }
+    
+
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-style-active{
+        width: 215px;
+        margin: 0;
+        font-size: 12px;
+        color: #999999;
+        
+        position: absolute;
+        top: 70px;
+        left: 257px;
+        
+    }
+    
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-provider-active{
+        width: 215px;
+        margin: 0;
+        font-size: 12px;
+        color: #999999;
+        
+        position: absolute;
+        top: 90px;
+        left: 257px;
+        
+    }
+
+    .gg .g-body .b-nr-main .nr-main-mode .nr-main-mode-active .main-mode-descri-active{
+        width: 427px;
+        
+        min-height: 44px;
+        background-color: #f8f8f8;
+        color: #666666;
+        font-size: 14px;
+        text-align: left;
+        padding: 22px 33px 16px 20px;
+        
+    }
+
+    /*内容图片*/
+     .gg .g-body .b-nr-main .nr-main-mode .main-mode-img{
+        width: 223px;
+        height: 124px;
+        margin: 1px;
+        background-color: #344;
+     }
+   /*课程名字*/
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-name{
+        display: block;
+        width: 205px;
+        font-size: 12px;
+        margin-top: 8px;
+        margin-left: 4px;
+        color: #333333;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+    /*课程提供者*/
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-style{
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        margin-left: 4px;
+        color: #999999;
+    }
+    /*课程人数*/
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-pepo{
+        margin-top: 8px;
+        margin-left: 4px;
+        
+        font-size: 12px;
+        color: #999999;
+        height: 16px;
+        width: 40px;
+        border-radius: 2px;
+        
+        border: 1px solid #999999;
+    }
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-pepo div{
+        display: inline-block;
+        width: 11px;
+        height: 13px;
+        margin:2px;
+        background-image: url(image/小Logo.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-pepo p{
+        position: relative;
+        bottom: 4px;
+        left: 2px;
+        margin:0;
+        width: 25px;
+        height: 15px;
+        display: inline-block;
+    }
+    /*课程价格*/
+    .gg .g-body .b-nr-main .nr-main-mode .main-mode-price{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 4px;
+        font-size: 12px;
+        font-weight:bold;
+        color: #ff3f00;
+    }
+
+
+    /*页码的css*/
+
+    .gg .g-body .b-neirong .b-nr-page{
+        position: absolute;
+        bottom: 0px;
+        right: 245px;
+        height: 22px;
+        text-align: center;
+        line-height: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        /*display: inline-block;*/
+        list-style-type: none;
+        z-index: 34;
+
+
+    }
+
+    .gg .g-body .b-neirong .b-nr-page li{
+        display: inline-block;
+        margin: 0px 6px 0px 6px;
+        width: 20px;
+        height: 20px;
+        color: #737373;
+    }
+
+
+        .gg .g-body .b-neirong .b-nr-page .page-active{
+        background-color: #9dd8b1;
+        color: #fff;
+    }
+
+    .gg .g-body .b-neirong .b-nr-page .page-last, .gg .g-body .b-neirong .b-nr-page .page-next{
+        
+        line-height: 20px;
+        width: 30px;
+        background-color:#9dd8b1; 
+        color:#fff;
+
+    }
+
+    .gg .g-body .b-neirong .b-nr-page li:hover{
+        color: #39a030;
+        cursor:pointer ;
+    }
+
+    
+    /*中间主要内容的模块结束*/

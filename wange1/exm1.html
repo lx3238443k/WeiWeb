@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.m{
+		width: 300px;
+		height: 150px;
+		position: relative;
+		margin: 0;
+		margin: 50px 0;
+	}
+	
+	.m .ul{
+		float: left;
+		width: 100px;
+		height: 20px;
+		margin-bottom: 2px;
+		background-color: pink;
+		position: relative;
+	}
+
+	.li{
+		display: none;
+	}
+
+	.m .ul:hover .li{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 102px;
+		width: 105px;
+		z-index: 1;
+		background-color: red;
+	}
+
+</style>
+<body>
+
+<div class="m">
+
+<div class="ul">a
+	<div class="li">1</div>
+	<div class="li">2</div>
+	<!-- <div class="li">3</div> -->
+</div>
+
+<div class="ul">b
+	<div class="li">4</div>
+	<div class="li">5</div>
+	<div class="li">6</div>
+
+</div>
+<div class="ul">b
+	<div class="li">4</div>
+	<div class="li">5</div>
+	<div class="li">6</div>
+
+</div>
+</div>
+	
+</body>
+</html>

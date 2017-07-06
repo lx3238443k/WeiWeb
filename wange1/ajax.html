@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.b-neirong{
+		width: 1000px;
+		height: 1000px;
+	}
+
+	.nr-main-mode{
+		float: left;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+
+</style>
+
+<body>
+
+<!-- 主要内容 -->
+		<div class="b-neirong" id="b-neirong">
+			<div class="b-nr-head">标头</div>
+			<div class="b-nr-video">视频</div>
+			<!-- 内容-重点内容 -->
+			<div class="b-nr-main" id="b-nr-main">
+				<div class="nr-main-mode">
+					<img src="" class="main-mode-img">
+					<span class="main-mode-name">呵呵呵</span>
+					<p class="main-mode-style">音频帮</p>
+					<div class="main-mode-pepo">510</div>
+					<p class="main-mode-price">￥800</p>
+				</div>
+			
+
+			</div>
+			<!-- 重点内容结束 -->
+			<div class="b-nr-list">列表</div>
+		</div>
+		<!-- 主要内容结束 -->
+
+</body>
+<script type="text/javascript">   
+
+
+function get(url, options, callback) {
+    var xhr;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest(); // IE7+, Firefox, Chrome, Opera, Safari 代码
+    } else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP"); // IE6, IE5 代码
+    }
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                callback(JSON.parse(xhr.responseText));
+            }
+        } else {
+            console.log('Request was unsuccessful:' + xhr.status);
+        }
+    }
+    xhr.open('get', url + '?' + serialize(options), true);
+    xhr.send(null);
+}
+ 
+function serialize(data) {
+    if (!data) return '';
+    var pairs = [];
+    for (var name in data) {
+        if (!data.hasOwnProperty(name)) continue;
+        if (typeof data[name] === 'function') continue;
+        var value = data[name].toString();
+        name = encodeURIComponent(name);
+        value = encodeURIComponent(value);
+        pairs.push(name + '=' + value);
+    }
+    return pairs.join('&');
+}
+ 
+
+
+get('http://study.163.com/webDev/couresByCategory.htm', {
+    pageNo: 1,psize:10,type:10
+}, function(data) {
+    console.log(data);
+
+    for(i=0;i<data.list.length;i++){
+    Id=data.list[i].id;
+    Name=data.list[i].name;
+    Img_url =data.list[i].bigPhotoUrl;
+    Style = data.list[i].provider;
+    Pepo =data.list[i].learnerCount;
+    Price =data.list[i].price;
+    //console.log(s);
+    //console.log(data.list[0].name);
+
+    var mode = document.createElement('div');
+        mode.className = 'nr-main-mode';
+        mode.id = Id;
+    
+
+    var m_img =document.createElement('img');
+        m_img.className= 'main-mode-img';
+        m_img.src = Img_url;
+
+    var m_name = document.createElement('span');
+    	m_name.className = 'main-mode-name';
+    var name_node=document.createTextNode(Name);
+		m_name.appendChild(name_node);
+
+    var m_style =document.createElement('p');
+    	m_style.className='main-mode-style';
+    var style_node=document.createTextNode(Style);
+    	m_style.appendChild(style_node);
+    
+    var m_pepo =document.createElement('div');
+    	m_pepo.className ='main-mode-pepo';
+    	var pepo_div =document.createElement('div');
+    	m_pepo.appendChild(pepo_div);
+    	var pepo_p = document.createElement('p');
+    	pepo_p.innerHTML = Pepo;
+    	m_pepo.appendChild(pepo_p);
+
+
+    var m_price =document.createElement('p');
+    	m_price.className ='main-mode-price';
+
+    	if(Price!=0){
+    	m_price.innerHTML = '￥'+Price;}
+    	else
+    		{m_price.innerHTML='免费'}
+
+
+
+    var main=document.getElementById('b-nr-main');
+    main.appendChild(mode);
+
+    var main_mode = document.getElementById(Id);
+    main_mode.appendChild(m_img);
+    main_mode.appendChild(m_name);
+    main_mode.appendChild(m_style);
+    main_mode.appendChild(m_pepo);
+    main_mode.appendChild(m_price);
+}
+
+
+});
+
+</script>
+</html>

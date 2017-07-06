@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>banner</title>
+</head>
+<style type="text/css">
+	html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.m-slider{
+  background-color: #fff;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+
+.m-slider, .m-slider .slide{
+  height: 100%;
+  width: 100%;
+}
+
+.m-slider .slide{
+  position: absolute;
+  top:0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+
+}
+
+.m-slider .slide.z-active{
+  transition: opacity .2s ease-in;
+}
+
+
+.m-slider .slide img{
+  border: 2px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px rgba(0,0,0, .5);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  max-width: 60%;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+
+.m-slider .slide h2{
+  margin-top: 40%;
+}
+	
+	.g-index{
+		position: absolute;
+		width: 624px;
+		height: 400px;
+		background-color: pink;
+	}
+
+	.m-cursor{
+ 	 z-index: 10;
+   	 text-align: center;
+  	 position: absolute;
+  	 bottom: 10px;
+ 	 left: 0;
+ 	 right: 0;
+  	 padding-left: 0;
+	}
+
+	.m-cursor li{
+ 	  width: 20px;
+  	  height: 20px;
+ 	  color: #aaa;
+	  line-height: 20px;
+	  border-radius: 50%;
+	  border: 2px solid #999;
+	  margin-right: 4px;
+	  list-style: none;
+	  display: inline-block;
+	  cursor: pointer;
+	  transition: background-color .5s;
+
+	}
+
+	.m-cursor li:hover, .m-cursor li.z-active{
+  	 background-color: #999;
+  	 color: #fff;
+	}
+
+	.m-cursor li.prev, .m-cursor li.next{
+  	 font-family: '宋体';
+	}
+
+</style>
+<body>
+   <div class="g-index" id="g-main">
+        
+   		<ul class="m-cursor">
+   		  <li class='prev'><</li>
+  			<li class='cursor'></li>
+  			<li class='cursor'></li>
+  			<li class='cursor'></li>
+  			<li class='next'>></li>
+		</ul>
+   </div>
+
+
+<script src='js/util.js'></script>
+        <script src='js/slider.js'></script>
+
+<script>
+
+
+var $ = function( selector ){
+  return [].slice.call(document.querySelectorAll(selector))
+}
+
+var cursors = $('.m-cursor .cursor');
+var prev = $('.m-cursor .prev')[0];
+var next = $('.m-cursor .next')[0];
+
+cursors.forEach(function(cursor, index){
+  cursor.addEventListener('click', function(){
+    slider.nav(index);
+  })
+})
+
+prev.addEventListener('click', function(){
+  slider.prev()
+})
+next.addEventListener('click', function(){
+  slider.next()
+})
+
+
+var slider = new Slider({
+  //视口容器
+  container: document.getElementById('g-main'),
+  // 图片列表
+  images: [
+    "./image/banner1.jpg",
+    "./image/banner1.jpg",
+    "./image/banner1.jpg"
+    
+  ],
+
+  // 是否允许拖拽
+  drag: true
+});
+
+// 通过监听`nav`事件来完成额外逻辑
+// --------------
+slider.on('nav', function( ev ){
+
+  var pageIndex = ev.pageIndex;
+
+  cursors.forEach(function(cursor, index){
+
+    if(index === pageIndex ){
+
+      cursor.className = 'z-active';
+
+    }else{
+
+      cursor.className = '';
+    }
+  })
+
+})
+
+// 3s 自动轮播
+setInterval(function(){
+  
+  // 下一页
+   //slider.next();
+
+},3000)
+
+// 直接跳到第二页
+slider.nav(2)
+
+
+
+</script>
+
+</body>
+</html>
