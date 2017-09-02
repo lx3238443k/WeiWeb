@@ -1,0 +1,10 @@
+.d3 p{color: blue;
+text-align: left;
+font-weight: bold;}
+
+.d3 p.special{
+	color: red;
+	text-align: right;
+}
+
+.d3 p:first-child{color:green }
